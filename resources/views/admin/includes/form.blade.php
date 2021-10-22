@@ -7,8 +7,8 @@
            value="{{ old('name') }} @isset($user) {{ $user->name }} @endisset">
     @error('name')
     <span class="invalid-feedback" role="alert">
-                            {{ $message }}
-                        </span>
+        {{ $message }}
+    </span>
     @enderror
 </div>
 <div class="mb-4">
@@ -19,8 +19,8 @@
     @isset($user) {{ $user->email }} @endisset">
     @error('email')
     <span class="invalid-feedback" role="alert">
-                            {{ $message }}
-                        </span>
+        {{ $message }}
+    </span>
     @enderror
 </div>
 @isset($create)
@@ -31,19 +31,19 @@
     <input class="form-control @error('password') is-invalid @enderror shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" name="password" placeholder="Insert password">
     @error('password')
     <span class="invalid-feedback" role="alert">
-                            {{ $message }}
-                        </span>
+        {{ $message }}
+    </span>
 @enderror
 </div>
 <div class="mb-6">
-    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="password_confirmation">
         Password Confirm
     </label>
     <input class="form-control @error('password_confirmation') is-invalid @enderror shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password_confirmation" type="password" name="password_confirmation" placeholder="Insert password">
     @error('password_confirmation')
     <span class="invalid-feedback" role="alert">
-                            {{ $message }}
-                        </span>
+        {{ $message }}
+    </span>
     @enderror
 </div>
 @endisset

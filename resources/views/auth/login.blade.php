@@ -19,7 +19,7 @@
 
                 </div>
                 <div class="flex items-center justify-between">
-                    <button class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    <button class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                         Sign In
                     </button>
                     <a class="inline-block align-baseline font-bold text-sm text-gray-700 hover:text-blue-800" href="#">

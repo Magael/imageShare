@@ -34,7 +34,17 @@
                             {{ $message }}
                         </span>
 @enderror
-<!--<p class="text-red-500 text-xs italic">Please choose a password.</p>-->
+</div>
+<div class="mb-6">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+        Password Confirm
+    </label>
+    <input class="form-control @error('password_confirmation') is-invalid @enderror shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password_confirmation" type="password" name="password_confirmation" placeholder="Insert password">
+    @error('password_confirmation')
+    <span class="invalid-feedback" role="alert">
+                            {{ $message }}
+                        </span>
+    @enderror
 </div>
 @endisset
 <div class="mb-6">

@@ -1,7 +1,10 @@
 <?php
 
 use Admin\UserController;
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
+use User\Profile;
+
 
 
 /*
@@ -19,7 +22,20 @@ Route::get('/', function () {
     return view('index');
 });
 
+//
+
+Route::resource('/blog', PostsController::class);
+
+//User related pages
+Route::prefix('user')->middleware(['auth'])->name('user.')->group(function (){
+    Route::get('profile', Profile::class)->name('profile');
+});
+
 //Admin Routes
 Route::prefix('admin')->middleware(['auth', 'auth.isAdmin'])->name('admin.')->group(function (){
     Route::resource('/users', UserController::class);
 });
+Auth::routes();
+
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

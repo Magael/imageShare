@@ -1,7 +1,6 @@
 <?php
 
 use Admin\UserController;
-use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 use User\Profile;
 

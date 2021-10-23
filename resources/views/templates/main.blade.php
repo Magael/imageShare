@@ -22,16 +22,17 @@
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
 
-<nav class="flex items-center justify-between flex-wrap bg-gray-700 p-6 mb-5">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
+<nav class="flex items-center justify-between flex-wrap bg-gray-700 p-6">
+    <div class="flex items-center flex-shrink text-white mr-6">
         <span class="uppercase font-bold text-5xl tracking-tight">{{ config('app.name', 'ImageShare') }}</span>
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class="text-sm lg:flex-grow">
+        <div class="text-xl lg:flex-grow">
             <div class="flex flex-col">
                 @if(Route::has('login'))
                     <div class="absolute top-0 right-0 mt-4 mr-4 space-x-4 sm:mt-6 sm:mr-6 sm:space-x-6">
                         @auth
+                            <a href="/blog" class="no-underline hover:underline text-2xl font-normal text-gray-200">Blog</a>
                             <a href="{{ route('user.profile') }}"
                                class="no-underline hover:underline text-2xl font-normal text-gray-200">{{ __('Profile') }}</a>
                             <a href="{{ route('logout') }}"
@@ -42,7 +43,6 @@
                                 @csrf
                             </form>
                         @else
-                            <a href="/blog" class="no-underline hover:underline text-2xl font-normal text-gray-200">Blog</a>
                             <a href="{{ route('login') }}"
                                class="no-underline hover:underline text-2xl font-normal text-gray-200">{{ __('Login') }}</a>
                             @if (Route::has('register'))
@@ -59,15 +59,14 @@
 </nav>
 
 @can('logged-in')
-<nav class="flex items-center justify-between flex-wrap bg-gray-100 p-6 mb-5">
-
+<nav class="flex items-center justify-between flex-wrap bg-gray-500 p-6 mb-5">
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class="text-sm lg:flex-grow">
-            <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 font-bold hover:text-white mr-4">
+        <div class="text-xl lg:flex-grow">
+            <a href="/" class="no-underline hover:underline text-2xl font-normal text-gray-200">
                 Home
             </a>
             @can('is-admin')
-            <a href="{{ route('admin.users.index') }}" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 font-bold hover:text-white mr-4">
+            <a href="{{ route('admin.users.index') }}" class="no-underline hover:underline text-2xl font-normal text-gray-200">
                 Users
             </a>
             @endcan

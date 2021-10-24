@@ -23,8 +23,8 @@
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
 
 <nav class="flex items-center justify-between flex-wrap bg-gray-700 p-6">
-    <div class="flex items-center flex-shrink text-white mr-6">
-        <span class="uppercase font-bold text-5xl tracking-tight">{{ config('app.name', 'ImageShare') }}</span>
+    <div class="flex items-center flex-shrink text-gray-50 mr-6">
+        <span class="uppercase font-bold text-5xl tracking-tight"><a href="/" class="no-underline text-gray-50 hover:no-underline text-gray-50">{{ config('app.name', 'ImageShare') }}</a></span>
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div class="text-xl lg:flex-grow">

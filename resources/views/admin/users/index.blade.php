@@ -45,13 +45,14 @@
                     </form>
                 </td>
                 </tr>
+                <div class="flex items-center justify-center bg-gray-50 py-4 px-2 sm:px-6 lg:px-8 ">
+                    {{ $users->links() }}
+                </div>
             @endforeach
 
             </tbody>
         </table>
-       <div class="flex items-center justify-center bg-gray-50 py-4 px-2 sm:px-6 lg:px-8 ">
-           {{ $users->links() }}
-       </div>
+
     </div>
 
 

@@ -21,7 +21,7 @@
             <a
                 href="/blog/create"
                 class=" bg-gray-700 uppercase bg-transparent text-gray-100
-                text-xs font-extrabold py-3 px-5 rounded-3xl">
+                text-l font-extrabold py-3 px-5 rounded-3xl float-right">
                 Create Post
             </a>
         </div>

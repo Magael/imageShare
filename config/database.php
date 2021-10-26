@@ -19,7 +19,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'remotemysql.com'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------

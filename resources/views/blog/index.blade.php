@@ -32,7 +32,7 @@
     <div class="sm:grid grid-flow-col auto-cols-max gap-4 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
             <a href="/blog/{{ $post->slug }}">
-            <img src="{{ asset('images/' . $post->image_path) }}" alt=""w-1/4 h-1/4 rounded-sm>
+            <img src="{{ asset('images/' . $post->image_path) }}" alt=""class="w-1/4 h-1/4 rounded-sm">
             <span class="text-gray-500">
                 By <span class="font-bold italic text-gray-800">{{ $post->user->name}}</span>, created on {{ date('d M Y', strtotime($post->updated_at)) }}.
             </span>

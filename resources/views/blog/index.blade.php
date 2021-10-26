@@ -27,12 +27,14 @@
         </div>
     @endif
 
+    <div class="grid grid-flow-row grid-cols-3 grid-rows-3 gap-4 w-4/5 mx-5 py-5">
+
     @foreach($posts as $post)
 
-    <div class="sm:grid grid-flow-col auto-cols-max gap-4 w-4/5 mx-auto py-15 border-b border-gray-200">
+    <div>
         <div>
             <a href="/blog/{{ $post->slug }}">
-            <img src="{{ asset('images/' . $post->image_path) }}" alt=""class="w-2/4 rounded-sm">
+            <img src="{{ asset('images/' . $post->image_path) }}" alt=""class="w-3/4 rounded py-5">
             <span class="text-gray-500">
                 By <span class="font-bold italic text-gray-800">{{ $post->user->name}}</span>, created on {{ date('d M Y', strtotime($post->updated_at)) }}.
             </span>
@@ -61,5 +63,5 @@
         </div>
     </div>
     @endforeach
-
+    </div>
 @endsection

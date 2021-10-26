@@ -3,3 +3,11 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+@layer base {
+img{
+    @apply border: 2px solid gray;
+    @apply border-radius: 5px;
+    @apply width: 400px;
+}
+}

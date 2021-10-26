@@ -50,11 +50,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', 'remotemysql.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'TzfzYHG4kH'),
+            'username' => env('DB_USERNAME', 'TzfzYHG4kH'),
+            'password' => env('DB_PASSWORD', 'GT5XWIJokp'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -67,7 +67,7 @@ return [
             ]) : [],
         ],
 
-        'pgsql' => [
+        /**'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
             'host' => $DATABASE_URL["host"],
@@ -80,7 +80,7 @@ return [
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
-        ],
+        ],**/
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',

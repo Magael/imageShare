@@ -19,17 +19,7 @@
                         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Password" name="password">
 
                     </div>
-                    <div class="mb-6">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="password_confirmation">
-                            Password Confirm
-                        </label>
-                        <input class="form-control @error('password_confirmation') is-invalid @enderror shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password_confirmation" type="password" name="password_confirmation" placeholder="Insert password">
-                        @error('password_confirmation')
-                        <span class="invalid-feedback" role="alert">
-                             {{ $message }}
-                        </span>
-                        @enderror
-                    </div>
+
                     <div class="flex items-center justify-between">
                         <button class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                             Sign In

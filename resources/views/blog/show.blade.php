@@ -18,7 +18,7 @@
             </p>
         </div>
         <div class="w-4/5 m-auto pt-20">
-            <img src="{{ asset('images/' . $post->image_path) }}" alt="" class="w-2/4 rounded>
+            <img src="{{ asset('images/' . $post->image_path) }}" alt="" class="w-1/4 rounded>
 
         </div>
     </div>
